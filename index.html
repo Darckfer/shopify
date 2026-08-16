@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA — Contemporary Fashion Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aura: {
+                            dark: '#1a1917',
+                            cream: '#f8f7f4',
+                            gold: '#c29b38',
+                            lightgold: '#e6cca0',
+                            gray: '#4a4845',
+                            lightgray: '#e6e4de'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-aura-cream text-aura-dark font-sans antialiased selection:bg-aura-gold selection:text-white">
+
+    <!-- Announcement Bar -->
+    <div class="bg-aura-dark text-aura-cream text-xs py-2.5 px-4 text-center tracking-widest uppercase font-medium">
+        Envíos gratis en pedidos superiores a 100€ | Nueva Colección Otoño-Invierno disponible
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-aura-cream/95 backdrop-blur-md border-b border-aura-lightgray">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-3xl font-bold tracking-wider text-aura-dark">AURA</a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="index.html" class="hover:text-aura-gold transition-colors">Inicio</a>
+                <a href="mujer.html" class="hover:text-aura-gold transition-colors">Mujer</a>
+                <a href="hombre.html" class="hover:text-aura-gold transition-colors">Hombre</a>
+                <a href="ninos.html" class="hover:text-aura-gold transition-colors">Niños</a>
+                <a href="nueva-coleccion.html" class="hover:text-aura-gold transition-colors">Nueva Colección</a>
+                <a href="ofertas.html" class="hover:text-aura-gold transition-colors text-red-600">Ofertas</a>
+            </nav>
+
+            <div class="flex items-center gap-5">
+                <a href="buscar.html" aria-label="Buscar"
+                    class="text-aura-dark hover:text-aura-gold transition-colors text-lg">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="cuenta.html" aria-label="Mi Cuenta"
+                    class="text-aura-dark hover:text-aura-gold transition-colors text-lg hidden sm:block">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="carrito.html" aria-label="Cesta de compra"
+                    class="relative text-aura-dark hover:text-aura-gold transition-colors text-lg flex items-center gap-2 bg-aura-lightgray/50 px-3 py-1.5 rounded-full">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count"
+                        class="text-xs font-semibold bg-aura-gold text-white rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero con campaña / nueva colección -->
+    <section class="relative h-[650px] bg-aura-dark flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center"
+            style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/073/637/296/small/elegant-couple-in-minimalist-winter-coats-by-nordic-fjord-scandinavian-fashion-natural-wool-fabrics-neutral-colors-sophisticated-style-coastal-scenery-luxury-outerwear-portrait-photo.jpg');">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-aura-dark via-transparent to-transparent opacity-80 z-10">
+        </div>
+
+        <div class="relative z-20 max-w-3xl px-6 text-aura-cream">
+            <span class="text-aura-gold uppercase tracking-[0.2em] text-xs font-semibold mb-4 block">Campaña
+                Otoño-Invierno 2026</span>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight">La Esencia del Minimalismo
+                Contemporáneo</h1>
+            <p class="text-lg md:text-xl text-aura-lightgray mb-8 max-w-xl mx-auto font-light">Diseños atemporales
+                confeccionados con fibras naturales y cortes precisos para una silueta sofisticada.</p>
+            <a href="#nueva-coleccion"
+                class="inline-block bg-aura-cream text-aura-dark font-medium px-8 py-4 rounded hover:bg-aura-gold hover:text-white transition-all tracking-wider text-sm">EXPLORAR
+                NUEVA COLECCIÓN</a>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 py-16 space-y-24">
+
+        <!-- 2. Nueva Colección (Destacada en Home) -->
+        <section id="nueva-coleccion">
+            <div
+                class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-aura-lightgray pb-6">
+                <div>
+                    <span
+                        class="text-xs uppercase tracking-widest text-aura-gold font-semibold mb-1 block">Editorial</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-aura-dark">Nueva Colección</h2>
+                </div>
+                <a href="#nueva-coleccion"
+                    class="text-sm font-semibold tracking-wider uppercase text-aura-dark hover:text-aura-gold mt-4 md:mt-0 inline-flex items-center gap-2">Ver
+                    todas las novedades <i class="fa-solid fa-arrow-right text-xs"></i></a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Producto 1 -->
+                <div class="group">
+                    <div class="relative h-[420px] rounded-lg overflow-hidden bg-aura-lightgray mb-4">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/071/052/170/small/modern-minimalist-clothing-store-interior-with-racks-of-apparel-and-display-tables-photo.jpg"
+                            alt="Abrigo de Lana Minimalista"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-aura-dark text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">Nueva</span>
+                        <button
+                            onclick="addToCart('Abrigo de Lana Minimalista', 249.00, 'https://static.vecteezy.com/system/resources/thumbnails/071/052/170/small/modern-minimalist-clothing-store-interior-with-racks-of-apparel-and-display-tables-photo.jpg')"
+                            class="absolute bottom-4 right-4 bg-white text-aura-dark w-11 h-11 rounded-full flex items-center justify-center shadow-md hover:bg-aura-gold hover:text-white transition-colors">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-1">Abrigo de Lana Minimalista</h3>
+                    <p class="text-sm text-aura-gray mb-2">Mujer · Lana virgen 100%</p>
+                    <p class="font-semibold text-aura-dark">249,00 €</p>
+                </div>
+                <!-- Producto 2 -->
+                <div class="group">
+                    <div class="relative h-[420px] rounded-lg overflow-hidden bg-aura-lightgray mb-4">
+                        <img src="http://glclothingsa.co.za/cdn/shop/files/fabric-detail.png?v=1782765510"
+                            alt="Jersey de Cachemira Premium"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-aura-gold text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">Exclusivo</span>
+                        <button
+                            onclick="addToCart('Jersey de Cachemira Premium', 145.00, 'http://glclothingsa.co.za/cdn/shop/files/fabric-detail.png?v=1782765510')"
+                            class="absolute bottom-4 right-4 bg-white text-aura-dark w-11 h-11 rounded-full flex items-center justify-center shadow-md hover:bg-aura-gold hover:text-white transition-colors">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-1">Jersey de Cachemira Premium</h3>
+                    <p class="text-sm text-aura-gray mb-2">Hombre · Cachemira pura</p>
+                    <p class="font-semibold text-aura-dark">145,00 €</p>
+                </div>
+                <!-- Producto 3 -->
+                <div class="group">
+                    <div class="relative h-[420px] rounded-lg overflow-hidden bg-aura-lightgray mb-4">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/073/637/296/small/elegant-couple-in-minimalist-winter-coats-by-nordic-fjord-scandinavian-fashion-natural-wool-fabrics-neutral-colors-sophisticated-style-coastal-scenery-luxury-outerwear-portrait-photo.jpg"
+                            alt="Gabardina Clásica Neutra"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-aura-dark text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">Nueva</span>
+                        <button
+                            onclick="addToCart('Gabardina Clásica Neutra', 210.00, 'https://static.vecteezy.com/system/resources/thumbnails/073/637/296/small/elegant-couple-in-minimalist-winter-coats-by-nordic-fjord-scandinavian-fashion-natural-wool-fabrics-neutral-colors-sophisticated-style-coastal-scenery-luxury-outerwear-portrait-photo.jpg')"
+                            class="absolute bottom-4 right-4 bg-white text-aura-dark w-11 h-11 rounded-full flex items-center justify-center shadow-md hover:bg-aura-gold hover:text-white transition-colors">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-1">Gabardina Clásica Neutra</h3>
+                    <p class="text-sm text-aura-gray mb-2">Mujer · Algodón impermeable</p>
+                    <p class="font-semibold text-aura-dark">210,00 €</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Categorías Destacadas -->
+        <section id="categorias">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs uppercase tracking-widest text-aura-gold font-semibold mb-1 block">Explora por
+                    Estilo</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-aura-dark">Categorías Destacadas</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <a href="#" class="group relative h-96 rounded-lg overflow-hidden flex items-end p-8 bg-aura-dark">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-500"
+                        style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/071/052/170/small/modern-minimalist-clothing-store-interior-with-racks-of-apparel-and-display-tables-photo.jpg');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-aura-dark via-transparent to-transparent"></div>
+                    <div class="relative z-10 text-aura-cream">
+                        <h3 class="font-serif text-2xl font-bold mb-1">Mujer</h3>
+                        <p class="text-xs text-aura-lightgray uppercase tracking-widest">Ver colección</p>
+                    </div>
+                </a>
+                <a href="#" class="group relative h-96 rounded-lg overflow-hidden flex items-end p-8 bg-aura-dark">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-500"
+                        style="background-image: url('http://glclothingsa.co.za/cdn/shop/files/fabric-detail.png?v=1782765510');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-aura-dark via-transparent to-transparent"></div>
+                    <div class="relative z-10 text-aura-cream">
+                        <h3 class="font-serif text-2xl font-bold mb-1">Hombre</h3>
+                        <p class="text-xs text-aura-lightgray uppercase tracking-widest">Ver colección</p>
+                    </div>
+                </a>
+                <a href="#" class="group relative h-96 rounded-lg overflow-hidden flex items-end p-8 bg-aura-dark">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-500"
+                        style="background-image: url('https://i.etsystatic.com/21794838/r/il/6d3cfc/3202417353/il_570xN.3202417353_crvy.jpg');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-aura-dark via-transparent to-transparent"></div>
+                    <div class="relative z-10 text-aura-cream">
+                        <h3 class="font-serif text-2xl font-bold mb-1">Accesorios</h3>
+                        <p class="text-xs text-aura-lightgray uppercase tracking-widest">Ver colección</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. Productos más vendidos -->
+        <section id="mas-vendidos">
+            <div class="flex items-end justify-between mb-12 border-b border-aura-lightgray pb-6">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-aura-gold font-semibold mb-1 block">Los
+                        Favoritos</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-aura-dark">Productos Más Vendidos</h2>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group">
+                    <div class="relative h-[420px] rounded-lg overflow-hidden bg-aura-lightgray mb-4">
+                        <img src="https://www.wearview.co/_next/image?url=https%3A%2F%2Fcdn.wearview.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fblog-images%2Fflat-lay-clothing-photography%2Fflat-lay-clothing-photography-casual-outfit.jpg&w=3840&q=75"
+                            alt="Blazer Estructurada Oversize"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-red-600 text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">-25%</span>
+                        <button
+                            onclick="addToCart('Blazer Estructurada Oversize', 134.25, 'https://www.wearview.co/_next/image?url=https%3A%2F%2Fcdn.wearview.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fblog-images%2Fflat-lay-clothing-photography%2Fflat-lay-clothing-photography-casual-outfit.jpg&w=3840&q=75')"
+                            class="absolute bottom-4 right-4 bg-white text-aura-dark w-11 h-11 rounded-full flex items-center justify-center shadow-md hover:bg-aura-gold hover:text-white transition-colors">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-1">Blazer Estructurada Oversize</h3>
+                    <p class="text-sm text-aura-gray mb-2">Mujer · Sarga estructurada</p>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-aura-dark">134,25 €</p>
+                        <span class="text-sm text-aura-gray line-through">179,00 €</span>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="relative h-[420px] rounded-lg overflow-hidden bg-aura-lightgray mb-4">
+                        <img src="https://i.etsystatic.com/21794838/r/il/6d3cfc/3202417353/il_570xN.3202417353_crvy.jpg"
+                            alt="Pantalón de Sarga Tailored"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <button
+                            onclick="addToCart('Pantalón de Sarga Tailored', 110.00, 'https://i.etsystatic.com/21794838/r/il/6d3cfc/3202417353/il_570xN.3202417353_crvy.jpg')"
+                            class="absolute bottom-4 right-4 bg-white text-aura-dark w-11 h-11 rounded-full flex items-center justify-center shadow-md hover:bg-aura-gold hover:text-white transition-colors">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-1">Pantalón de Sarga Tailored</h3>
+                    <p class="text-sm text-aura-gray mb-2">Hombre · Algodón orgánico</p>
+                    <p class="font-semibold text-aura-dark">110,00 €</p>
+                </div>
+                <div class="group">
+                    <div class="relative h-[420px] rounded-lg overflow-hidden bg-aura-lightgray mb-4">
+                        <img src="https://www.wearview.co/_next/image?url=https%3A%2F%2Fcdn.wearview.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fblog-images%2Fflat-lay-clothing-photography%2Fflat-lay-clothing-photography-casual-outfit.jpg&w=3840&q=75"
+                            alt="Bufanda de Lana Virgen"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute top-3 left-3 bg-red-600 text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">-40%</span>
+                        <button
+                            onclick="addToCart('Bufanda de Lana Virgen', 39.00, 'https://www.wearview.co/_next/image?url=https%3A%2F%2Fcdn.wearview.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fblog-images%2Fflat-lay-clothing-photography%2Fflat-lay-clothing-photography-casual-outfit.jpg&w=3840&q=75')"
+                            class="absolute bottom-4 right-4 bg-white text-aura-dark w-11 h-11 rounded-full flex items-center justify-center shadow-md hover:bg-aura-gold hover:text-white transition-colors">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-1">Bufanda de Lana Virgen</h3>
+                    <p class="text-sm text-aura-gray mb-2">Unisex · Tejido artesanal</p>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-aura-dark">39,00 €</p>
+                        <span class="text-sm text-aura-gray line-through">65,00 €</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Banner de Promoción -->
+        <section
+            class="bg-aura-dark text-aura-cream rounded-2xl p-10 md:p-16 relative overflow-hidden flex flex-col md:flex-row items-center justify-between">
+            <div class="absolute inset-0 opacity-20 bg-cover bg-center"
+                style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/071/052/170/small/modern-minimalist-clothing-store-interior-with-racks-of-apparel-and-display-tables-photo.jpg');">
+            </div>
+            <div class="relative z-10 max-w-lg mb-8 md:mb-0">
+                <span class="text-aura-gold uppercase tracking-[0.2em] text-xs font-semibold mb-2 block">Promoción de
+                    Temporada</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold mb-4">Rebajas Exclusivas de Invierno</h2>
+                <p class="text-aura-lightgray text-sm md:text-base font-light mb-6">Disfruta de hasta un 40% de
+                    descuento en una selección exclusiva de abrigos y punto de alta gama.</p>
+                <a href="./ofertas.html"
+                    class="inline-block bg-aura-gold text-white font-medium px-8 py-3.5 rounded hover:bg-white hover:text-aura-dark transition-all tracking-wider text-sm">VER
+                    OFERTAS</a>
+            </div>
+            <div class="relative z-10 text-center md:text-right">
+                <span class="font-serif text-6xl md:text-8xl font-bold text-aura-gold block">-40%</span>
+                <span class="text-xs uppercase tracking-widest text-aura-lightgray">En artículos seleccionados</span>
+            </div>
+        </section>
+
+        <!-- 7. Newsletter -->
+        <section class="max-w-xl mx-auto text-center py-10">
+            <span class="text-xs uppercase tracking-widest text-aura-gold font-semibold mb-2 block">Únete a la
+                Comunidad</span>
+            <h2 class="font-serif text-3xl font-bold mb-3">Suscríbete a Nuestro Newsletter</h2>
+            <p class="text-aura-gray text-sm mb-6">Recibe un 15% de descuento en tu primera compra, además de acceso
+                prioritario a lanzamientos y eventos editoriales.</p>
+            <form onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte a AURA!');" class="flex gap-2">
+                <input type="email" placeholder="Introduce tu correo electrónico" required
+                    class="flex-grow bg-white border border-aura-lightgray px-4 py-3 rounded text-sm focus:outline-none focus:border-aura-gold">
+                <button type="submit"
+                    class="bg-aura-dark text-white px-6 py-3 rounded text-sm font-medium hover:bg-aura-gold transition-colors">Suscribirse</button>
+            </form>
+        </section>
+
+        <!-- 8. Instagram / Redes Sociales -->
+        <section>
+            <div class="text-center mb-10">
+                <span
+                    class="text-xs uppercase tracking-widest text-aura-gold font-semibold mb-1 block">@AuraFashion</span>
+                <h2 class="font-serif text-3xl font-bold">Síguenos en Instagram</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative h-64 rounded-lg overflow-hidden group">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/071/052/170/small/modern-minimalist-clothing-store-interior-with-racks-of-apparel-and-display-tables-photo.jpg"
+                        alt="Instagram Post"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xl">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="relative h-64 rounded-lg overflow-hidden group">
+                    <img src="http://glclothingsa.co.za/cdn/shop/files/fabric-detail.png?v=1782765510"
+                        alt="Instagram Post"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xl">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="relative h-64 rounded-lg overflow-hidden group">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/073/637/296/small/elegant-couple-in-minimalist-winter-coats-by-nordic-fjord-scandinavian-fashion-natural-wool-fabrics-neutral-colors-sophisticated-style-coastal-scenery-luxury-outerwear-portrait-photo.jpg"
+                        alt="Instagram Post"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xl">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="relative h-64 rounded-lg overflow-hidden group">
+                    <img src="https://i.etsystatic.com/21794838/r/il/6d3cfc/3202417353/il_570xN.3202417353_crvy.jpg"
+                        alt="Instagram Post"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xl">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shopping Cart Drawer Overlay -->
+    <div id="cart-overlay" onclick="toggleCart()"
+        class="fixed inset-0 bg-aura-dark/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+
+    <!-- Shopping Cart Drawer -->
+    <!-- <div id="cart-drawer"
+        class="fixed top-0 right-0 h-full w-full max-w-md bg-aura-cream z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 border-b border-aura-lightgray flex items-center justify-between bg-white">
+            <h2 class="font-serif text-2xl font-bold">Tu Cesta de Compra</h2>
+            <button onclick="toggleCart()" class="text-aura-dark hover:text-aura-gold text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div id="cart-items" class="flex-grow overflow-y-auto p-6 space-y-4 divide-y divide-aura-lightgray">
+            <p id="empty-cart-msg" class="text-center text-aura-gray py-12 italic">Tu cesta está vacía actualmente.</p>
+        </div>
+
+        <div class="p-6 border-t border-aura-lightgray bg-white space-y-4">
+            <div class="flex justify-between text-lg font-bold">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">0,00 €</span>
+            </div>
+            <p class="text-xs text-aura-gray">Impuestos incluidos. Gastos de envío calculados en el checkout.</p>
+            <button onclick="checkout()"
+                class="w-full bg-aura-dark text-aura-cream py-4 rounded font-medium hover:bg-aura-gold transition-colors tracking-wider text-sm uppercase">
+                Proceder al Checkout
+            </button>
+        </div>
+    </div> -->
+
+    <!-- 9. Footer Completo -->
+    <footer class="bg-aura-dark text-aura-cream pt-16 pb-12 mt-20 border-t border-aura-lightgray/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <h3 class="font-serif text-2xl font-bold mb-4 tracking-wider">AURA</h3>
+                <p class="text-aura-lightgray text-sm leading-relaxed">Moda contemporánea y diseño editorial enfocado en
+                    la durabilidad, el minimalismo y el lujo consciente.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Secciones</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="mujer.html" class="hover:text-white transition-colors">Mujer</a></li>
+                    <li><a href="hombre.html" class="hover:text-white transition-colors">Hombre</a></li>
+                    <li><a href="ninos.html" class="hover:text-white transition-colors">Niños</a></li>
+                    <li><a href="nueva-coleccion.html" class="hover:text-white transition-colors">Nueva Colección</a>
+                    </li>
+                    <li><a href="ofertas.html" class="hover:text-white transition-colors">Rebajas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Atención al Cliente</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="envios.html" class="hover:text-white transition-colors">Envíos y Entregas</a></li>
+                    <li><a href="devoluciones.html" class="hover:text-white transition-colors">Devoluciones</a></li>
+                    <li><a href="guia-tallas.html" class="hover:text-white transition-colors">Guía de Tallas</a></li>
+                    <li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Legal & Privacidad</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="aviso-legal.html" class="hover:text-white transition-colors">Aviso Legal</a></li>
+                    <li><a href="privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    </li>
+                    <li><a href="cookies.html" class="hover:text-white transition-colors">Política de Cookies</a></li>
+                    <li><a href="terminos-y-condiciones.html" class="hover:text-white transition-colors">Términos
+                            de Contratación</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 pt-8 border-t border-aura-lightgray/10 text-center text-xs text-aura-lightgray">
+            &copy; 2026 AURA Fashion Group. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- JavaScript Carrito y Funciones -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

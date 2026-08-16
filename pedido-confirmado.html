@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Confirmado — AURA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aura: {
+                            dark: '#1a1917',
+                            cream: '#f8f7f4',
+                            gold: '#c29b38',
+                            lightgold: '#e6cca0',
+                            gray: '#4a4845',
+                            lightgray: '#e6e4de'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-aura-cream text-aura-dark font-sans antialiased selection:bg-aura-gold selection:text-white">
+
+    <!-- Announcement Bar -->
+    <div class="bg-aura-dark text-aura-cream text-xs py-2.5 px-4 text-center tracking-widest uppercase font-medium">
+        Gracias por confiar en AURA | Tu pedido está siendo procesado con esmero
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-aura-cream/95 backdrop-blur-md border-b border-aura-lightgray">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-3xl font-bold tracking-wider text-aura-dark">AURA</a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="index.html" class="hover:text-aura-gold transition-colors">Inicio</a>
+                <a href="mujer.html" class="hover:text-aura-gold transition-colors">Mujer</a>
+                <a href="hombre.html" class="hover:text-aura-gold transition-colors">Hombre</a>
+                <a href="ninos.html" class="hover:text-aura-gold transition-colors">Niños</a>
+                <a href="nueva-coleccion.html" class="hover:text-aura-gold transition-colors">Nueva Colección</a>
+                <a href="ofertas.html" class="hover:text-aura-gold transition-colors text-red-600">Ofertas</a>
+            </nav>
+
+            <div class="flex items-center gap-5">
+               <a href="buscar.html" aria-label="Buscar" class="text-aura-dark hover:text-aura-gold transition-colors text-lg">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="cuenta.html" aria-label="Mi Cuenta"
+                    class="text-aura-dark hover:text-aura-gold transition-colors text-lg hidden sm:block">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="carrito.html" aria-label="Cesta de compra"
+                    class="relative text-aura-dark hover:text-aura-gold transition-colors text-lg flex items-center gap-2 bg-aura-lightgray/50 px-3 py-1.5 rounded-full">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count"
+                        class="text-xs font-semibold bg-aura-gold text-white rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Section -->
+    <section class="max-w-7xl mx-auto px-6 pt-8 pb-4">
+        <nav class="text-xs text-aura-gray tracking-wider uppercase flex items-center gap-2">
+            <a href="index.html" class="hover:text-aura-gold">Inicio</a>
+            <span>/</span>
+            <span class="text-aura-dark font-semibold">Pedido Confirmado</span>
+        </nav>
+    </section>
+
+    <!-- Main Confirmation Section -->
+    <main class="max-w-4xl mx-auto px-6 py-12 mb-20">
+        <div class="bg-white border border-aura-lightgray rounded-2xl p-8 sm:p-12 shadow-sm text-center space-y-6">
+
+            <!-- Success Icon -->
+            <div
+                class="w-20 h-20 bg-aura-gold/10 text-aura-gold rounded-full flex items-center justify-center mx-auto text-3xl mb-4">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <span class="text-xs uppercase tracking-widest text-aura-gold font-semibold block">Transacción
+                Exitosa</span>
+            <h1 class="font-serif text-3xl sm:text-5xl font-bold text-aura-dark">¡Gracias por tu compra!</h1>
+
+            <p class="text-aura-gray text-sm sm:text-base max-w-lg mx-auto font-light leading-relaxed">
+                Hemos recibido tu pedido correctamente. En breve recibirás un correo electrónico de confirmación con los
+                detalles del envío y el seguimiento.
+            </p>
+
+            <!-- Order Badge Info -->
+            <div
+                class="inline-block bg-aura-cream border border-aura-lightgray px-6 py-3 rounded-lg text-sm text-aura-dark my-4 font-medium">
+                Número de Pedido: <span class="font-bold text-aura-gold" id="order-id">#AURA-8492026</span>
+            </div>
+
+            <!-- Order Details Box -->
+            <div class="border-t border-aura-lightgray pt-8 mt-8 text-left space-y-6">
+                <h3 class="font-serif text-xl font-bold text-aura-dark">Resumen del Envío y Entrega</h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+                    <div class="bg-aura-cream/50 p-5 rounded-xl border border-aura-lightgray/50 space-y-2">
+                        <strong class="block text-aura-dark font-semibold flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-aura-gold"></i> Dirección de Envío
+                        </strong>
+                        <p class="text-aura-gray">Paseo de Gracia 42, 2º 1ª<br>08007 Barcelona, España</p>
+                    </div>
+
+                    <div class="bg-aura-cream/50 p-5 rounded-xl border border-aura-lightgray/50 space-y-2">
+                        <strong class="block text-aura-dark font-semibold flex items-center gap-2">
+                            <i class="fa-solid fa-truck-fast text-aura-gold"></i> Método de Envío
+                        </strong>
+                        <p class="text-aura-gray">Envío Estándar AURA<br>Entrega estimada: 2-4 días laborables</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="index.html"
+                    class="w-full sm:w-auto bg-aura-dark text-aura-cream px-8 py-4 rounded font-medium hover:bg-aura-gold transition-colors tracking-wider text-xs uppercase text-center">
+                    Volver al Inicio
+                </a>
+                <a href="mujer.html"
+                    class="w-full sm:w-auto border border-aura-lightgray text-aura-dark px-8 py-4 rounded font-medium hover:border-aura-dark transition-colors tracking-wider text-xs uppercase text-center">
+                    Seguir Comprando
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Completo -->
+    <footer class="bg-aura-dark text-aura-cream pt-16 pb-12 mt-20 border-t border-aura-lightgray/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <h3 class="font-serif text-2xl font-bold mb-4 tracking-wider">AURA</h3>
+                <p class="text-aura-lightgray text-sm leading-relaxed">Moda contemporánea y diseño editorial enfocado en
+                    la durabilidad, el minimalismo y el lujo consciente.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Secciones</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="mujer.html" class="hover:text-white transition-colors">Mujer</a></li>
+                    <li><a href="hombre.html" class="hover:text-white transition-colors">Hombre</a></li>
+                    <li><a href="ninos.html" class="hover:text-white transition-colors">Niños</a></li>
+                    <li><a href="nueva-coleccion.html" class="hover:text-white transition-colors">Nueva Colección</a>
+                    </li>
+                    <li><a href="ofertas.html" class="hover:text-white transition-colors">Rebajas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Atención al Cliente</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="envios.html" class="hover:text-white transition-colors">Envíos y Entregas</a></li>
+                    <li><a href="devoluciones.html" class="hover:text-white transition-colors">Devoluciones</a></li>
+                    <li><a href="guia-tallas.html" class="hover:text-white transition-colors">Guía de Tallas</a></li>
+                    <li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Legal & Privacidad</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="aviso-legal.html" class="hover:text-white transition-colors">Aviso Legal</a></li>
+                    <li><a href="privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    </li>
+                    <li><a href="cookies.html" class="hover:text-white transition-colors">Política de Cookies</a></li>
+                    <li><a href="terminos-y-condiciones.html" class="hover:text-white transition-colors">Términos
+                            de Contratación</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 pt-8 border-t border-aura-lightgray/10 text-center text-xs text-aura-lightgray">
+            &copy; 2026 AURA Fashion Group. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Archivo JavaScript Global y Unificado -->
+    <script src="js/main.js"></script>
+    <script>
+        // Generar un ID de pedido aleatorio único
+        const randomId = '#AURA-' + Math.floor(1000000 + Math.random() * 9000000);
+        const orderIdEl = document.getElementById('order-id');
+        if (orderIdEl) {
+            orderIdEl.textContent = randomId;
+        }
+    </script>
+</body>
+
+</html>

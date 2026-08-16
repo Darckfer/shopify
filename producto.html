@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrigo de Lana Minimalista — AURA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aura: {
+                            dark: '#1a1917',
+                            cream: '#f8f7f4',
+                            gold: '#c29b38',
+                            lightgold: '#e6cca0',
+                            gray: '#4a4845',
+                            lightgray: '#e6e4de'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-aura-cream text-aura-dark font-sans antialiased selection:bg-aura-gold selection:text-white">
+
+    <!-- Announcement Bar -->
+    <div class="bg-aura-dark text-aura-cream text-xs py-2.5 px-4 text-center tracking-widest uppercase font-medium">
+        Envíos gratis en pedidos superiores a 100€ | Devoluciones ampliadas a 30 días
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-aura-cream/95 backdrop-blur-md border-b border-aura-lightgray">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-3xl font-bold tracking-wider text-aura-dark">AURA</a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="index.html" class="hover:text-aura-gold transition-colors">Inicio</a>
+                <a href="mujer.html" class="hover:text-aura-gold transition-colors">Mujer</a>
+                <a href="hombre.html" class="hover:text-aura-gold transition-colors">Hombre</a>
+                <a href="ninos.html" class="hover:text-aura-gold transition-colors">Niños</a>
+                <a href="nueva-coleccion.html" class="hover:text-aura-gold transition-colors">Nueva Colección</a>
+                <a href="ofertas.html" class="hover:text-aura-gold transition-colors text-red-600">Ofertas</a>
+            </nav>
+
+            <div class="flex items-center gap-5">
+               <a href="buscar.html" aria-label="Buscar" class="text-aura-dark hover:text-aura-gold transition-colors text-lg">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="cuenta.html" aria-label="Mi Cuenta"
+                    class="text-aura-dark hover:text-aura-gold transition-colors text-lg hidden sm:block">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="carrito.html" aria-label="Cesta de compra"
+                    class="relative text-aura-dark hover:text-aura-gold transition-colors text-lg flex items-center gap-2 bg-aura-lightgray/50 px-3 py-1.5 rounded-full">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count"
+                        class="text-xs font-semibold bg-aura-gold text-white rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Section -->
+    <section class="max-w-7xl mx-auto px-6 pt-8 pb-4">
+        <nav class="text-xs text-aura-gray tracking-wider uppercase flex items-center gap-2">
+            <a href="../index.html" class="hover:text-aura-gold">Inicio</a>
+            <span>/</span>
+            <a href="../mujer.html" class="hover:text-aura-gold">Mujer</a>
+            <span>/</span>
+            <span class="text-aura-dark font-semibold">Abrigo de Lana Minimalista</span>
+        </nav>
+    </section>
+
+    <!-- Main Product Detail Section -->
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+            <!-- Product Gallery (7 cols) -->
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="relative h-[550px] sm:col-span-2 rounded-xl overflow-hidden bg-aura-lightgray">
+                    <img id="main-image"
+                        src="https://static.vecteezy.com/system/resources/thumbnails/071/052/170/small/modern-minimalist-clothing-store-interior-with-racks-of-apparel-and-display-tables-photo.jpg"
+                        alt="Abrigo de Lana Minimalista Principal" class="w-full h-full object-cover">
+                    <span
+                        class="absolute top-4 left-4 bg-aura-dark text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">Nueva
+                        Colección</span>
+                </div>
+                <div onclick="changeImage(this.querySelector('img').src)"
+                    class="h-[280px] rounded-xl overflow-hidden bg-aura-lightgray cursor-pointer border-2 border-transparent hover:border-aura-gold transition-all">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/073/637/296/small/elegant-couple-in-minimalist-winter-coats-by-nordic-fjord-scandinavian-fashion-natural-wool-fabrics-neutral-colors-sophisticated-style-coastal-scenery-luxury-outerwear-portrait-photo.jpg"
+                        alt="Abrigo Detalle 1" class="w-full h-full object-cover">
+                </div>
+                <div onclick="changeImage(this.querySelector('img').src)"
+                    class="h-[280px] rounded-xl overflow-hidden bg-aura-lightgray cursor-pointer border-2 border-transparent hover:border-aura-gold transition-all">
+                    <img src="http://glclothingsa.co.za/cdn/shop/files/fabric-detail.png?v=1782765510"
+                        alt="Abrigo Detalle 2" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Product Info (5 cols) -->
+            <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-aura-gold font-semibold mb-2 block">Lana Virgen
+                        100%</span>
+                    <h1 class="font-serif text-3xl sm:text-4xl font-bold text-aura-dark mb-3">Abrigo de Lana Minimalista
+                    </h1>
+                    <div class="flex items-center gap-4">
+                        <span class="text-2xl font-bold text-aura-dark">249,00 €</span>
+                        <div class="flex items-center text-aura-gold text-sm gap-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="text-aura-gray text-xs ml-1">(24 opiniones)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-aura-gray text-sm leading-relaxed font-light">
+                    Silueta estructurada de inspiración escandinava. Confeccionado con lana virgen de alta calidad,
+                    solapas de muesca clásica, bolsillos de ojal discretos y cierre de botonadura doble oculta. Diseñado
+                    para ofrecer calidez impecable sin sacrificar la ligereza.
+                </p>
+
+                <!-- Color Selection -->
+                <div class="space-y-3 pt-2">
+                    <label class="block text-xs uppercase tracking-wider font-semibold text-aura-dark">Color: <span
+                            id="selected-color" class="font-normal text-aura-gray">Negro Carbón</span></label>
+                    <div class="flex items-center gap-3">
+                        <button onclick="selectColor('Negro Carbón')"
+                            class="w-8 h-8 rounded-full bg-[#1a1917] ring-2 ring-offset-2 ring-aura-gold focus:outline-none"></button>
+                        <button onclick="selectColor('Beige Arena')"
+                            class="w-8 h-8 rounded-full bg-[#d9c5b2] hover:ring-2 hover:ring-offset-2 hover:ring-aura-gold focus:outline-none transition-all"></button>
+                        <button onclick="selectColor('Gris Piedra')"
+                            class="w-8 h-8 rounded-full bg-[#8c8a85] hover:ring-2 hover:ring-offset-2 hover:ring-aura-gold focus:outline-none transition-all"></button>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="space-y-3 pt-2">
+                    <div class="flex justify-between items-center">
+                        <label class="block text-xs uppercase tracking-wider font-semibold text-aura-dark">Seleccionar
+                            Talla</label>
+                        <button class="text-xs text-aura-gray underline hover:text-aura-gold transition-colors">Guía de
+                            Tallas</button>
+                    </div>
+                    <div id="size-options" class="grid grid-cols-4 gap-3">
+                        <button onclick="selectSize('XS')"
+                            class="size-btn py-3 border border-aura-lightgray text-sm rounded font-medium hover:border-aura-dark transition-colors focus:border-aura-dark focus:bg-aura-dark focus:text-white">XS</button>
+                        <button onclick="selectSize('S')"
+                            class="size-btn py-3 border border-aura-lightgray text-sm rounded font-medium hover:border-aura-dark transition-colors focus:border-aura-dark focus:bg-aura-dark focus:text-white">S</button>
+                        <button onclick="selectSize('M')"
+                            class="size-btn py-3 border border-aura-lightgray text-sm rounded font-medium hover:border-aura-dark transition-colors focus:border-aura-dark focus:bg-aura-dark focus:text-white">M</button>
+                        <button onclick="selectSize('L')"
+                            class="size-btn py-3 border border-aura-lightgray text-sm rounded font-medium hover:border-aura-dark transition-colors focus:border-aura-dark focus:bg-aura-dark focus:text-white">L</button>
+                    </div>
+                </div>
+
+                <!-- Quantity & Add to Cart -->
+                <div class="space-y-4 pt-4 border-t border-aura-lightgray">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center border border-aura-lightgray rounded bg-white">
+                            <button onclick="adjustQuantity(-1)"
+                                class="px-4 py-3 text-aura-gray hover:text-aura-dark transition-colors">-</button>
+                            <span id="quantity-display" class="px-4 py-3 text-sm font-semibold">1</span>
+                            <button onclick="adjustQuantity(1)"
+                                class="px-4 py-3 text-aura-gray hover:text-aura-dark transition-colors">+</button>
+                        </div>
+                        <button onclick="addCurrentProductToCart()"
+                            class="flex-grow bg-aura-dark text-aura-cream py-4 rounded font-medium hover:bg-aura-gold transition-colors tracking-wider text-sm uppercase flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i> Añadir a la Cesta
+                        </button>
+                    </div>
+                    <button
+                        class="w-full border border-aura-lightgray text-aura-dark py-3.5 rounded font-medium hover:border-aura-dark transition-colors text-sm flex items-center justify-center gap-2">
+                        <i class="fa-regular fa-heart"></i> Añadir a Favoritos
+                    </button>
+                </div>
+
+                <!-- Accordion / Details list -->
+                <div class="border-t border-aura-lightgray pt-6 space-y-4 text-sm text-aura-gray">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-truck text-aura-gold mt-1"></i>
+                        <div>
+                            <strong class="text-aura-dark block">Envío y Devoluciones</strong>
+                            <span>Envío estándar gratuito en 2-4 días laborables. Devoluciones gratuitas en tienda y
+                                domicilio.</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-seedling text-aura-gold mt-1"></i>
+                        <div>
+                            <strong class="text-aura-dark block">Sostenibilidad & Composición</strong>
+                            <span>100% Lana virgen certificada RWS. Forro de viscosa ecológica procedente de bosques
+                                gestionados sosteniblemente.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Related Products Section -->
+    <section class="max-w-7xl mx-auto px-6 py-20 border-t border-aura-lightgray mt-16">
+        <div class="text-center mb-12">
+            <span class="text-xs uppercase tracking-widest text-aura-gold font-semibold mb-1 block">Completa tu
+                look</span>
+            <h2 class="font-serif text-3xl font-bold text-aura-dark">También te puede interesar</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Related 1 -->
+            <div class="group">
+                <div class="relative h-[420px] rounded-lg overflow-hidden bg-aura-lightgray mb-4">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/073/637/296/small/elegant-couple-in-minimalist-winter-coats-by-nordic-fjord-scandinavian-fashion-natural-wool-fabrics-neutral-colors-sophisticated-style-coastal-scenery-luxury-outerwear-portrait-photo.jpg"
+                        alt="Abrigo Largo de Lana Estructurado"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-3 left-3 bg-aura-dark text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">Nueva</span>
+                    <button
+                        onclick="addToCart('Abrigo Largo de Lana Estructurado', 260.00, 'https://static.vecteezy.com/system/resources/thumbnails/073/637/296/small/elegant-couple-in-minimalist-winter-coats-by-nordic-fjord-scandinavian-fashion-natural-wool-fabrics-neutral-colors-sophisticated-style-coastal-scenery-luxury-outerwear-portrait-photo.jpg')"
+                        class="absolute bottom-4 right-4 bg-white text-aura-dark w-11 h-11 rounded-full flex items-center justify-center shadow-md hover:bg-aura-gold hover:text-white transition-colors">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+                <h3 class="font-serif text-xl font-bold mb-1">Abrigo Largo de Lana Estructurado</h3>
+                <p class="text-sm text-aura-gray mb-2">Lana virgen y alpaca</p>
+                <p class="font-semibold text-aura-dark">260,00 €</p>
+            </div>
+
+            <!-- Related 2 -->
+            <div class="group">
+                <div class="relative h-[420px] rounded-lg overflow-hidden bg-aura-lightgray mb-4">
+                    <img src="http://glclothingsa.co.za/cdn/shop/files/fabric-detail.png?v=1782765510"
+                        alt="Jersey Cuello Cisne Cachemira"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-3 left-3 bg-aura-gold text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">Exclusivo</span>
+                    <button
+                        onclick="addToCart('Jersey Cuello Cisne Cachemira', 160.00, 'http://glclothingsa.co.za/cdn/shop/files/fabric-detail.png?v=1782765510')"
+                        class="absolute bottom-4 right-4 bg-white text-aura-dark w-11 h-11 rounded-full flex items-center justify-center shadow-md hover:bg-aura-gold hover:text-white transition-colors">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+                <h3 class="font-serif text-xl font-bold mb-1">Jersey Cuello Cisne Cachemira</h3>
+                <p class="text-sm text-aura-gray mb-2">Cachemira pura italiana</p>
+                <p class="font-semibold text-aura-dark">160,00 €</p>
+            </div>
+
+            <!-- Related 3 -->
+            <div class="group">
+                <div class="relative h-[420px] rounded-lg overflow-hidden bg-aura-lightgray mb-4">
+                    <img src="https://i.etsystatic.com/21794838/r/il/6d3cfc/3202417353/il_570xN.3202417353_crvy.jpg"
+                        alt="Pantalón Wide Leg de Sarga"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <span
+                        class="absolute top-3 left-3 bg-aura-dark text-white text-xs px-3 py-1 rounded-full uppercase tracking-wider">Nueva</span>
+                    <button
+                        onclick="addToCart('Pantalón Wide Leg de Sarga', 120.00, 'https://i.etsystatic.com/21794838/r/il/6d3cfc/3202417353/il_570xN.3202417353_crvy.jpg')"
+                        class="absolute bottom-4 right-4 bg-white text-aura-dark w-11 h-11 rounded-full flex items-center justify-center shadow-md hover:bg-aura-gold hover:text-white transition-colors">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+                <h3 class="font-serif text-xl font-bold mb-1">Pantalón Wide Leg de Sarga</h3>
+                <p class="text-sm text-aura-gray mb-2">Algodón orgánico</p>
+                <p class="font-semibold text-aura-dark">120,00 €</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Drawer Overlay -->
+    <div id="cart-overlay" onclick="toggleCart()"
+        class="fixed inset-0 bg-aura-dark/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+
+    <!-- Shopping Cart Drawer -->
+    <!-- <div id="cart-drawer"
+        class="fixed top-0 right-0 h-full w-full max-w-md bg-aura-cream z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 border-b border-aura-lightgray flex items-center justify-between bg-white">
+            <h2 class="font-serif text-2xl font-bold">Tu Cesta de Compra</h2>
+            <button onclick="toggleCart()" class="text-aura-dark hover:text-aura-gold text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div id="cart-items" class="flex-grow overflow-y-auto p-6 space-y-4 divide-y divide-aura-lightgray">
+            <p id="empty-cart-msg" class="text-center text-aura-gray py-12 italic">Tu cesta está vacía actualmente.</p>
+        </div>
+
+        <div class="p-6 border-t border-aura-lightgray bg-white space-y-4">
+            <div class="flex justify-between text-lg font-bold">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">0,00 €</span>
+            </div>
+            <p class="text-xs text-aura-gray">Impuestos incluidos. Gastos de envío calculados en el checkout.</p>
+            <button onclick="checkout()"
+                class="w-full bg-aura-dark text-aura-cream py-4 rounded font-medium hover:bg-aura-gold transition-colors tracking-wider text-sm uppercase">
+                Proceder al Checkout
+            </button>
+        </div>
+    </div> -->
+
+    <!-- Footer Completo -->
+    <footer class="bg-aura-dark text-aura-cream pt-16 pb-12 mt-20 border-t border-aura-lightgray/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <h3 class="font-serif text-2xl font-bold mb-4 tracking-wider">AURA</h3>
+                <p class="text-aura-lightgray text-sm leading-relaxed">Moda contemporánea y diseño editorial enfocado en
+                    la durabilidad, el minimalismo y el lujo consciente.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Secciones</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="mujer.html" class="hover:text-white transition-colors">Mujer</a></li>
+                    <li><a href="hombre.html" class="hover:text-white transition-colors">Hombre</a></li>
+                    <li><a href="ninos.html" class="hover:text-white transition-colors">Niños</a></li>
+                    <li><a href="nueva-coleccion.html" class="hover:text-white transition-colors">Nueva Colección</a>
+                    </li>
+                    <li><a href="ofertas.html" class="hover:text-white transition-colors">Rebajas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Atención al Cliente</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="envios.html" class="hover:text-white transition-colors">Envíos y Entregas</a></li>
+                    <li><a href="devoluciones.html" class="hover:text-white transition-colors">Devoluciones</a></li>
+                    <li><a href="guia-tallas.html" class="hover:text-white transition-colors">Guía de Tallas</a></li>
+                    <li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Legal & Privacidad</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="aviso-legal.html" class="hover:text-white transition-colors">Aviso Legal</a></li>
+                    <li><a href="privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    </li>
+                    <li><a href="cookies.html" class="hover:text-white transition-colors">Política de Cookies</a></li>
+                    <li><a href="terminos-y-condiciones.html" class="hover:text-white transition-colors">Términos
+                            de Contratación</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 pt-8 border-t border-aura-lightgray/10 text-center text-xs text-aura-lightgray">
+            &copy; 2026 AURA Fashion Group. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Script específico de la página de detalle (PDP) -->
+    <script>
+        let selectedSize = 'M';
+        let selectedColorName = 'Negro Carbón';
+        let currentQuantity = 1;
+
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+
+        function selectColor(colorName) {
+            selectedColorName = colorName;
+            document.getElementById('selected-color').textContent = colorName;
+        }
+
+        function selectSize(size) {
+            selectedSize = size;
+        }
+
+        function adjustQuantity(change) {
+            currentQuantity += change;
+            if (currentQuantity < 1) currentQuantity = 1;
+            document.getElementById('quantity-display').textContent = currentQuantity;
+        }
+
+        function addCurrentProductToCart() {
+            const name = `Abrigo de Lana Minimalista (${selectedColorName}, Talla ${selectedSize})`;
+            const price = 249.00;
+            const image = document.getElementById('main-image').src;
+
+            // Llama a addToCart definido en el main.js, pasándole la cantidad si lo deseas o repitiendo la inserción
+            for (let i = 0; i < currentQuantity; i++) {
+                // Comprobamos si la función global existe antes de llamarla
+                if (typeof addToCart === 'function') {
+                    // Evitamos duplicar la apertura del drawer en bucle llamando una variante o adaptando
+                }
+            }
+            // O una forma más limpia directamente usando la lógica de carrito global:
+            if (window.auraAddToCartWithQuantity) {
+                window.auraAddToCartWithQuantity(name, price, image, currentQuantity);
+            } else {
+                // Fallback por si acaso
+                addToCart(name, price, image);
+            }
+        }
+    </script>
+
+    <!-- Archivo JavaScript Global / Centralizado -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

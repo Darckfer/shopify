@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal — AURA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aura: {
+                            dark: '#1a1917',
+                            cream: '#f8f7f4',
+                            gold: '#c29b38',
+                            lightgold: '#e6cca0',
+                            gray: '#4a4845',
+                            lightgray: '#e6e4de'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-aura-cream text-aura-dark font-sans antialiased selection:bg-aura-gold selection:text-white">
+
+    <!-- Announcement Bar -->
+    <div class="bg-aura-dark text-aura-cream text-xs py-2.5 px-4 text-center tracking-widest uppercase font-medium">
+        Lujo consciente y diseño editorial — Transparencia y Confianza
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-aura-cream/95 backdrop-blur-md border-b border-aura-lightgray">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-3xl font-bold tracking-wider text-aura-dark">AURA</a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="index.html" class="hover:text-aura-gold transition-colors">Inicio</a>
+                <a href="mujer.html" class="hover:text-aura-gold transition-colors">Mujer</a>
+                <a href="hombre.html" class="hover:text-aura-gold transition-colors">Hombre</a>
+                <a href="ninos.html" class="hover:text-aura-gold transition-colors">Niños</a>
+                <a href="nueva-coleccion.html" class="hover:text-aura-gold transition-colors">Nueva Colección</a>
+                <a href="ofertas.html" class="hover:text-aura-gold transition-colors text-red-600">Ofertas</a>
+            </nav>
+
+            <div class="flex items-center gap-5">
+               <a href="buscar.html" aria-label="Buscar" class="text-aura-dark hover:text-aura-gold transition-colors text-lg">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="cuenta.html" aria-label="Mi Cuenta"
+                    class="text-aura-dark hover:text-aura-gold transition-colors text-lg hidden sm:block">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="carrito.html" aria-label="Cesta de compra"
+                    class="relative text-aura-dark hover:text-aura-gold transition-colors text-lg flex items-center gap-2 bg-aura-lightgray/50 px-3 py-1.5 rounded-full">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-count"
+                        class="text-xs font-semibold bg-aura-gold text-white rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Section -->
+    <section class="max-w-7xl mx-auto px-6 pt-8 pb-4">
+        <nav class="text-xs text-aura-gray tracking-wider uppercase flex items-center gap-2">
+            <a href="index.html" class="hover:text-aura-gold">Inicio</a>
+            <span>/</span>
+            <span class="text-aura-dark font-semibold">Aviso Legal</span>
+        </nav>
+    </section>
+
+    <!-- Main Legal Content Section -->
+    <main class="max-w-4xl mx-auto px-6 py-12 mb-20">
+        <div class="bg-white border border-aura-lightgray rounded-2xl p-8 sm:p-12 shadow-sm space-y-8">
+
+            <div class="border-b border-aura-lightgray pb-6">
+                <span class="text-xs uppercase tracking-widest text-aura-gold font-semibold block mb-2">Información
+                    Corporativa</span>
+                <h1 class="font-serif text-3xl sm:text-4xl font-bold text-aura-dark">Aviso Legal</h1>
+                <p class="text-xs text-aura-gray mt-2">Última actualización: Agosto de 2026</p>
+            </div>
+
+            <div class="space-y-6 text-sm text-aura-gray leading-relaxed">
+
+                <section class="space-y-3">
+                    <h2 class="font-serif text-lg font-bold text-aura-dark">1. Datos Identificativos</h2>
+                    <p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11
+                        de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se
+                        facilitan a continuación los siguientes datos de la empresa titular de este sitio web:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong>Denominación social:</strong> AURA Fashion Group S.L.</li>
+                        <li><strong>CIF:</strong> B-8492026-A</li>
+                        <li><strong>Domicilio social:</strong> Paseo de Gracia 42, 08007 Barcelona, España</li>
+                        <li><strong>Correo electrónico de contacto:</strong> contacto@aura-fashion.com</li>
+                        <li><strong>Teléfono de atención al cliente:</strong> +34 930 000 000</li>
+                    </ul>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="font-serif text-lg font-bold text-aura-dark">2. Objeto y Ámbito de Aplicación</h2>
+                    <p>El presente aviso legal regula el acceso, navegación y uso del sitio web <strong
+                            class="text-aura-dark">aura-fashion.com</strong> (en adelante, el "Sitio Web"), así como las
+                        responsabilidades derivadas de la utilización de sus contenidos (entendiendo por estos los
+                        textos, gráficos, dibujos, diseños, códigos, software, fotografías, música, vídeos, sonidos,
+                        bases de datos, imágenes, expresiones o informaciones).</p>
+                    <p>El acceso y utilización de este Sitio Web atribuye la condición de Usuario, el cual acepta desde
+                        dicho acceso y utilización todas las condiciones aquí reflejadas.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="font-serif text-lg font-bold text-aura-dark">3. Propiedad Intelectual e Industrial</h2>
+                    <p>AURA Fashion Group S.L. es titular o cuenta con la debida licencia sobre todos los derechos de
+                        propiedad intelectual e industrial del Sitio Web, así como de los elementos contenidos en el
+                        mismo (a título enunciativo: imágenes, sonido, audio, vídeo, software o textos; marcas o
+                        logotipos, combinaciones de colores, estructura y diseño, selección de materiales usados,
+                        programas de ordenador necesarios para su funcionamiento, acceso y uso, etc.).</p>
+                    <p>Quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública,
+                        incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta
+                        página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la
+                        autorización expresa de AURA.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="font-serif text-lg font-bold text-aura-dark">4. Exclusión de Garantías y Responsabilidad
+                    </h2>
+                    <p>AURA Fashion Group S.L. no se hace responsable, en ningún caso, de los daños y perjuicios de
+                        cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los
+                        contenidos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos
+                        o lesivos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias
+                        para evitarlo.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="font-serif text-lg font-bold text-aura-dark">5. Modificaciones</h2>
+                    <p>AURA se reserva el derecho de efectuar sin previo aviso las modificaciones que considere
+                        oportunas en su Sitio Web, pudiendo cambiar, suprimir o añadir tanto los contenidos y servicios
+                        que se presten a través de la misma como la forma en la que éstos aparezcan presentados o
+                        localizados.</p>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="font-serif text-lg font-bold text-aura-dark">6. Legislación Aplicable y Jurisdicción</h2>
+                    <p>La relación entre AURA Fashion Group S.L. y el Usuario se regirá por la normativa española
+                        vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de
+                        Barcelona, salvo que la ley aplicable disponga otra cosa.</p>
+                </section>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Completo -->
+    <footer class="bg-aura-dark text-aura-cream pt-16 pb-12 mt-20 border-t border-aura-lightgray/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <h3 class="font-serif text-2xl font-bold mb-4 tracking-wider">AURA</h3>
+                <p class="text-aura-lightgray text-sm leading-relaxed">Moda contemporánea y diseño editorial enfocado en
+                    la durabilidad, el minimalismo y el lujo consciente.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Secciones</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="mujer.html" class="hover:text-white transition-colors">Mujer</a></li>
+                    <li><a href="hombre.html" class="hover:text-white transition-colors">Hombre</a></li>
+                    <li><a href="ninos.html" class="hover:text-white transition-colors">Niños</a></li>
+                    <li><a href="nueva-coleccion.html" class="hover:text-white transition-colors">Nueva Colección</a>
+                    </li>
+                    <li><a href="ofertas.html" class="hover:text-white transition-colors">Rebajas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Atención al Cliente</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="envios.html" class="hover:text-white transition-colors">Envíos y Entregas</a></li>
+                    <li><a href="devoluciones.html" class="hover:text-white transition-colors">Devoluciones</a></li>
+                    <li><a href="guia-tallas.html" class="hover:text-white transition-colors">Guía de Tallas</a></li>
+                    <li><a href="contacto.html" class="hover:text-white transition-colors">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-aura-gold">Legal & Privacidad</h4>
+                <ul class="space-y-2 text-sm text-aura-lightgray">
+                    <li><a href="#" class="text-white font-medium transition-colors">Aviso Legal</a></li>
+                    <li><a href="privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    </li>
+                    <li><a href="cookies.html" class="hover:text-white transition-colors">Política de Cookies</a></li>
+                    <li><a href="terminos-y-condiciones.html" class="hover:text-white transition-colors">Términos
+                            de Contratación</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 pt-8 border-t border-aura-lightgray/10 text-center text-xs text-aura-lightgray">
+            &copy; 2026 AURA Fashion Group. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- JavaScript para Cesta -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
